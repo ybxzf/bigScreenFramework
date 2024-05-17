@@ -18,11 +18,36 @@
 body {
   font-size: 2rem;
 }
-.flex-item {
+
+.flex-item-ctn {
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
+  // border: 1px solid #cc2727;
+  background-image: url('../assets/images/microPowerGrid/item_border_1.png');
+  background-size: 94% 92%;
+  background-position: center;
+  /* 防止背景图片重复 */
+  background-repeat: no-repeat;
+
+  .flex-item {
+    padding: 1rem;
+
+    .item-title {
+      border: 1px solid #83eeb0;
+      height: 2.7rem;
+      font-size: 1rem;
+      padding-left: 2rem;
+      font-style: italic;
+      font-weight: bolder;
+      color: #fff;
+      background: linear-gradient(to bottom, white, rgb(177, 217, 255));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: flex;
+      // padding-right: 1rem;
+    }
+  }
 }

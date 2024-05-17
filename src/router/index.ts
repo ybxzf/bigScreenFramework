@@ -1,11 +1,12 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
 import { routes } from "./routes";
 
-// const routerHistory = createWebHistory('/vue-project')
+//history模式
+// const routerHistory = createWebHistory('/sim-dashboard')
 const router = createRouter({
   //import.meta.env: vite.config中配置的基本信息
-  
-  history: createWebHistory(import.meta.env.BASE_URL),
+  // hash模式
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   // history: routerHistory,
   routes
 })
@@ -17,6 +18,7 @@ router.beforeEach((to, _, next) => {
 });
 
 // 全局后置钩子，这里可以加入改变页面标题等操作
-router.afterEach((to, from) => { });
+router.afterEach((to, from) => {
+});
 
 export default router
